@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Vehicle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="list.html">List Vehicles</a>
+    <a href="listOne.html">Search Vehicle</a>
+    <a href="insert.html">Add Vehicle</a>
+    <a href="update.html">Update Vehicle</a>
+    <a href="delete.html">Delete Vehicle</a>
+</nav>
+<main class="container">
+    <h1>Update Vehicle</h1>
+    <form id="selectUpdateVehicleForm">
+        <label for="updateVehId">Choose Vehicle ID</label>
+        <select id="updateVehId" required><option value="">Loading vehicle IDs...</option></select>
+        <div class="actions"><button type="submit">Load Vehicle Details</button></div>
+    </form>
+    <form id="updateVehicleForm" hidden>
+        <label for="updateVehNo">Vehicle Number</label><input id="updateVehNo" required maxlength="20">
+        <label for="updateVehType">Vehicle Type</label><select id="updateVehType" required><option>Car</option><option>Bike</option><option>SUV</option><option>Scooter</option><option>Van</option><option>Bus</option></select>
+        <label for="updateVehModel">Vehicle Model</label><input id="updateVehModel" required maxlength="50">
+        <label for="updateVehRent">Rent Per Day (₹)</label><input id="updateVehRent" type="number" min="0.01" step="0.01" required>
+        <label for="updateVehStatus">Status</label><select id="updateVehStatus" required><option>Available</option><option>Not Available</option></select>
+        <div class="actions"><button type="submit">Save Changes</button></div>
+    </form>
+    <div id="updateMessage" class="message" aria-live="polite"></div>
+</main>
+<footer>© 2026 Vehicle Rental Management System</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Vehicle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="list.html">List Vehicles</a>
+    <a href="listOne.html">Search Vehicle</a>
+    <a href="insert.html">Add Vehicle</a>
+    <a href="update.html">Update Vehicle</a>
+    <a href="delete.html">Delete Vehicle</a>
+</nav>
+<main class="container">
+    <h1>Search Vehicle</h1>
+    <form id="searchVehicleForm">
+        <label for="searchVehId">Vehicle ID</label>
+        <select id="searchVehId" required><option value="">Loading vehicle IDs...</option></select>
+        <button type="submit">Search Vehicle</button>
+    </form>
+    <div id="searchResult" class="message" aria-live="polite">Choose a vehicle ID to view its details.</div>
+</main>
+<footer>© 2026 Vehicle Rental Management System</footer>
+</body>
+</html>

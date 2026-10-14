@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #102b4e;
+    --blue: #2449a5;
+    --light-blue: #eaf1ff;
+    --background: #f4f7fb;
+    --text: #17253b;
+    --muted: #64748b;
+    --border: #dce4ef;
+    --white: #ffffff;
+    --green: #16834a;
+    --red: #c62828;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: linear-gradient(rgba(10, 20, 35, 0.45), rgba(10, 20, 35, 0.55)),
+                url("https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&w=1920&q=80") no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: var(--navy);
+    padding: 14px 18px;
+    box-shadow: 0 3px 12px rgba(15, 35, 65, 0.15);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 7px;
+}
+
+nav a:hover, nav a:focus {
+    background: #284b70;
+}
+
+.container {
+    width: min(1180px, calc(100% - 32px));
+    margin: 34px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(220, 228, 239, 0.8);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(10, 25, 47, 0.2);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--navy);
+    margin-top: 0;
+}
+
+h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h2 { font-size: 1.55rem; }
+
+.hero {
+    text-align: center;
+    padding: 18px 0 28px;
+}
+
+.hero img, .page-image {
+    display: none;
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 720px;
+    margin: 0 auto 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.card {
+    display: block;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fbfdff;
+    text-align: center;
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: var(--blue);
+    background: var(--light-blue);
+}
+
+form {
+    width: min(100%, 620px);
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 14px 0 6px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #a9c2ff;
+    border-color: var(--blue);
+}
+
+button, .button {
+    display: inline-block;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 18px;
+    background: var(--blue);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 16px;
+}
+
+button:hover, .button:hover {
+    background: var(--navy);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+th {
+    background: linear-gradient(120deg, var(--navy), var(--blue));
+    color: white;
+    text-align: left;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+tbody tr:nth-child(even) { background: #f8faff; }
+tbody tr:hover { background: var(--light-blue); }
+
+.message {
+    width: min(100%, 620px);
+    margin: 16px auto;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+.message.success { background: #e8f7ee; color: #126537; }
+.message.error { background: #fff0f0; color: #9f1c1c; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #f1f5f9;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 640px) {
+    nav { justify-content: flex-start; }
+    nav a { padding: 8px 10px; font-size: 0.92rem; }
+    .container { margin: 18px auto; padding: 18px; }
+    .hero img, .page-image { height: 180px; }
+}
